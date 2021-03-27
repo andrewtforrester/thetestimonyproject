@@ -1,0 +1,11 @@
+{% extends 'home/base.html' %}
+
+{% block maincontent %}
+  <div class="col restricted">
+    <h1>{{article.title}}</h1>
+    <h3>{{article.author}}</h3>
+    <h6>{{article.author.first_name}} is a {{article.author.year.lower}} majoring in {{article.author.majors.lower}}.</h6>
+    {{article.text}}
+  </div>
+
+{% endblock %}

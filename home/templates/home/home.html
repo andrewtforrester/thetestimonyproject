@@ -1,0 +1,8 @@
+{% extends 'home/base.html' %}
+
+{% block maincontent %}
+  {% for a in articles %}
+    <h1><a href="/{{a.author.first_name.lower}}{{a.author.last_name.lower}}/">{{a.title}}</a></h1>
+    <h3>{{a.author}}</h3>
+  {% endfor %}
+{% endblock %}
